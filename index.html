@@ -47,7 +47,7 @@
   LottieInteractivity.create({
     player: '#firstLottie',
     mode: 'chain',
-    actions: [
+      actions: [
       {
           state: 'autoplay',
           transition: 'click',
@@ -55,14 +55,17 @@
       },
       {
           state: 'autoplay',
-          transition: 'seek',
+          transition: 'onComplete',
+        forceFlag: false,
           frames: [60, 120],
       },
       {
       state: 'autoplay',
           position: { x: [0, 1], y: [0, 1] },
           type: "seek",
-          frames: [120, 180]
+            forceFlag: false,
+          frames: [120, 180],
+        transition: "seek"
       
       },
     ]
